@@ -14,6 +14,10 @@ public class SignupRequest {
     private String password;
 
     @NotBlank
+    @Size(min = 6, max = 40)
+    private String confirmPassword;
+
+    @NotBlank
     @Size(min = 4, max = 50)
     private String name;
 
@@ -37,5 +41,9 @@ public class SignupRequest {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 }
